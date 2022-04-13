@@ -11,11 +11,9 @@ const chooseOptimalDistance = (t, k, ls) => {
                 if(step<k-1){
                     stepCombination(step+1, i+1)
                 } else {
-                    if(!ar.includes(combinations)){
                     ar.push(([]).concat(combinations));
                     var initialValue = 0;
-                    summ.push(([]).concat(combinations.reduce((a,b)=>{return a+b;}, initialValue)));
-                    } 
+                    summ.push(([]).concat(combinations.reduce((a,b)=>{return a+b;}, initialValue)));  
                 }
                 control[i]=false;
             }
@@ -30,6 +28,7 @@ if(!!summFilter.length){
     else
         return null;
 }
-console.log(chooseOptimalDistance(174,3,[51, 56, 58, 59, 61]));//173
-console.log(chooseOptimalDistance(163, 3, [50])); // null
+//console.log(chooseOptimalDistance(174,3,[51, 56, 58, 59, 61]));//173
+//console.log(chooseOptimalDistance(163, 3, [50])); // null
+console.log(chooseOptimalDistance(430,5,[ 100, 76, 56, 44, 89, 73, 68, 56, 64, 123, 233, 144, 50, 132, 123, 34 ]));
 
